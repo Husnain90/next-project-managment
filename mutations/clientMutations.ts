@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-const ADD_CLIENT = gql `
+const ADD_CLIENT = gql`
   mutation AddClient {
     addClient($name:string! , $email:string! , $phone:string!) {
       id
@@ -9,7 +9,7 @@ const ADD_CLIENT = gql `
       phone
     }
   }
-`
+`;
 
 const DELETE_CLIENT = gql`
   mutation DeleteClient {
@@ -22,4 +22,4 @@ const DELETE_CLIENT = gql`
   }
 `;
 
-export {ADD_CLIENT,DELETE_CLIENT}
+export { ADD_CLIENT, DELETE_CLIENT };
