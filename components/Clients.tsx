@@ -1,5 +1,8 @@
+"use client"
 import React from "react";
 import ClientRow from "./ClientRow";
+import { useQuery } from "@apollo/client";
+import { GET_CLIENTS } from "@/Query/client";
 
 const Client = [
   {
@@ -27,8 +30,18 @@ const Client = [
     phoneNumber: "1234556",
   },
 ];
+interface ClientData {
+  clients: {
+    id: string;
+    name: string;
+    email: string;
+    phone: string;
+  }[];
+}
 
 const Clients = () => {
+  const { data } = useQuery<ClientData>(GET_CLIENTS);
+  console.log(data?.clients);
   return (
     <table className=" ">
       <thead>
@@ -39,8 +52,8 @@ const Clients = () => {
         </tr>
       </thead>
       <tbody>
-        {Client && Client.length > 0 ? (
-          Client.map((client) => <ClientRow client={client} key={client.id} />)
+        {data?.clients && data?.clients.length > 0 ? (
+          data?.clients.map((client) => <ClientRow client={client} key={client.id} />)
         ) : (
           <tr>
             <td>null</td>
