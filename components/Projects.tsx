@@ -14,44 +14,7 @@ const Projects = () => {
       client: string;
     }[];
   }
-  // const data: ProjectType[] = [
-  //   {
-  //     id: "1",
-  //     name: "project47",
-  //     disrciption: "this is very confidential",
-  //     status: "pending",
-  //     client: "jcob",
-  //   },
-  //   {
-  //     id: "2",
-  //     name: "project121",
-  //     disrciption: "this is the top most  confidential",
-  //     status: "started",
-  //     client: "jhon",
-  //   },
-  //   {
-  //     id: "3",
-  //     name: "project47",
-  //     disrciption: "this is very confidential",
-  //     status: "pending",
-  //     client: "jcob",
-  //   },
-  //   {
-  //     id: "4",
-  //     name: "project121",
-  //     disrciption: "this is the top most  confidential",
-  //     status: "started",
-  //     client: "jhon",
-  //   },
-  //   {
-  //     id: "5",
-  //     name: "project47",
-  //     disrciption: "this is very confidential",
-  //     status: "pending",
-  //     client: "jcob",
-  //   },
-
-  // ];
+  
   const { data } = useQuery<ProjectType>(GET_PROJECTS);
   console.log(data);
   return (

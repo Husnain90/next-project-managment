@@ -4,16 +4,6 @@ import { GET_PROJECT } from "@/Query/project";
 import { useQuery } from "@apollo/client";
 import React from "react";
 
-const data1 = {
-  name: "ppppppppppp",
-  discription: "oooooooo",
-  status: "sdsd",
-  client: {
-    name: "kkkkkkk",
-    emial: "sssssss@ssss",
-    phone: "22222",
-  },
-};
 interface project {
   id: string;
   name: string;

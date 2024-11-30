@@ -4,7 +4,7 @@ import React from "react";
 interface Props {
   params: { id: string };
 }
-const page = ({params}: Props) => {
+const projectInfo = ({params}: Props) => {
   const projectId =  params.id;
   return (
     <div>
@@ -14,4 +14,4 @@ const page = ({params}: Props) => {
   );
 };
 
-export default page;
+export default projectInfo;
