@@ -14,7 +14,7 @@ const Projects = () => {
       client: string;
     }[];
   }
-  
+
   const { data } = useQuery<ProjectType>(GET_PROJECTS);
   console.log(data);
   return (
@@ -24,10 +24,7 @@ const Projects = () => {
           <ProjectCard project={project} key={project.id} />
         ))
       ) : (
-        <div>
-          No Project avaiable No Project avaiable No Project avaiable No Project
-          avaiable{" "}
-        </div>
+        <div>There is not project avaiable</div>
       )}
     </div>
   );
