@@ -24,7 +24,10 @@ const Projects = () => {
           <ProjectCard project={project} key={project.id} />
         ))
       ) : (
-        <div>No Project avaiable </div>
+        <div>
+          No Project avaiable No Project avaiable No Project avaiable No Project
+          avaiable{" "}
+        </div>
       )}
     </div>
   );
